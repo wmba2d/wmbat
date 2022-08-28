@@ -14,14 +14,11 @@ export function PostListing(props: { post: Post }) {
           {props.post.title}
         </Text>
         <Text appearance='small' as='p'>
-          Posted on {dayjs(props.post.publishedAt).format('MMMM D, YYYY')} &mdash;{' '}
+          {Constants.rating.get(props.post.rating.toString())} - Posted on {dayjs(props.post.publishedAt).format('MMMM D, YYYY')} &mdash;{' '}
           {props.post.readingTime}
         </Text>
         <Text appearance='body' as='p'>
           {props.post.excerpt}
-        </Text>
-        <Text appearance='small' as='p'>
-          {Constants.rating.get(props.post.rating.toString())}
         </Text>
       </a>
     </Link>

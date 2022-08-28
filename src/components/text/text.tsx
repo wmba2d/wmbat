@@ -11,7 +11,7 @@ export function Text({ children, appearance = 'body', as: As = 'p'}: TextProps) 
     return (
         <As
             className={clsx({
-                ['text-2xl font-bold']: appearance === 'h1',
+                ['text-2xl font-bold mt-12']: appearance === 'h1',
                 ['font-bold']: appearance === 'h2',
                 ['text-sm text-slate-600 mb-6']: appearance === 'small',
             })}
